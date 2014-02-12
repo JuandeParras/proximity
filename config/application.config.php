@@ -7,11 +7,12 @@
  */
 return array(
     'modules' => array(
+    	'AssetManager',
+    	'DoctrineModule',
+    	'DoctrineORMModule',
         'Application',
-        'DoctrineModule',
-        'DoctrineORMModule',
         'Trastienda',
-        'Backend'
+        'Backend',
         ),
     'module_listener_options' => array(
         'module_paths' => array(

@@ -45,6 +45,8 @@ return array(
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
                             'defaults' => array(
+                            	'action' => 'index',
+                            	'__NAMESPACE__' => 'Application\Controller'
                             ),
                         ),
                     ),
@@ -62,7 +64,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'en_US',
+        'locale' => 'es_ES',
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',
@@ -98,5 +100,12 @@ return array(
             'routes' => array(
             ),
         ),
+    ),
+    'asset_manager' => array(
+    	'resolver_configs' => array(
+    		'paths' => array(
+    			'Application' => __DIR__ . '/../public',
+    		),
+    	),
     ),
 );
