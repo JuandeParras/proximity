@@ -18,10 +18,14 @@ class IndexController extends AbstractActionController {
 	protected $_objectManager;
 	
     public function indexAction() {
-  		$productos = $this->getObjectManager()->getRepository('\Trastienda\Entity\Producto')->findAll();
-        var_dump($productos);
-  		
-  		return new ViewModel(array('productos' => $productos));
+    	
+  		return new ViewModel();
+    }
+    
+    public function pruebaAction() {
+    	$productos = $this->getObjectManager()->getRepository('\Trastienda\Entity\Producto')->findAll();
+    	var_dump($productos);
+    	return new ViewModel(array('productos' => $productos));
     }
     
     protected function getObjectManager()
